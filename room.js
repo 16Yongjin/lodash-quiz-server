@@ -168,6 +168,8 @@ class Game {
   }
 
   userJoinRoom({ roomId, username }) {
+    const exRoomId = this.users.getUser(username).roomId
+    this.rooms.removeUserFromRoom({ roomId: exRoomId, username })
     this.rooms.addUserToRoom({ roomId, username })
     this.users.setUserRoom({ roomId, username })
   }

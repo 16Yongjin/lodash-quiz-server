@@ -1,4 +1,3 @@
-const { get } = require('./db')
 const { Game } = require('./room')
 
 describe('User Join Room', () => {
