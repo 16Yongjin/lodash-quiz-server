@@ -3,8 +3,8 @@ const server = require('http').Server(app)
 const io = require('socket.io')(server, { cors: true })
 const { game } = require('./game')
 
-server.listen(3000, () => {
-  console.log('listen on port 3000')
+server.listen(5000, () => {
+  console.log('listen on port 5000')
 })
 
 const socketIdToUser = {}
