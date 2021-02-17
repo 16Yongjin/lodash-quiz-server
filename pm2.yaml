@@ -1,0 +1,5 @@
+apps:
+  - script: ./index.js
+    name: 'lodash-quiz'
+    env_production:
+      NODE_ENV: production
