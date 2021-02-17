@@ -34,16 +34,6 @@ const quizzes = [
     output: "['a', 'a', 'a']",
     answer: "_.fill(array, 'a');",
   },
-  {
-    input: '[1, [2, [3, [4]], 5]]',
-    output: '[1, 2, [3, [4]], 5]',
-    answer: '_.flatten([1, [2, [3, [4]], 5]]);',
-  },
-  {
-    input: '[1, [2, [3, [4]], 5]]',
-    output: '[1, 2, 3, 4, 5]',
-    answer: '_.flattenDeep([1, [2, [3, [4]], 5]]);',
-  },
 ]
 
 module.exports = { quizzes }
