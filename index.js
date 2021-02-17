@@ -61,6 +61,10 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     console.log('user', socketIdToUser[socket.id], 'disconnected')
-    if (socketIdToUser[socket.id]) game.userLeaveRoom(socketIdToUser[socket.id])
+    if (socketIdToUser[socket.id]) {
+      const { roomId } = game.getUser(socketIdToUser[socket.id])
+      game.userLeaveRoom(socketIdToUser[socket.id])
+      if (roomId) io.to(roomId).emit('GAME_UPDATE', game.getGameInfo(roomId))
+    }
   })
 })
